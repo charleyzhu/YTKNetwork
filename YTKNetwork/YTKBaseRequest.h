@@ -331,6 +331,10 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 ///  This validator will be used to test if `responseStatusCode` is valid.
 - (BOOL)statusCodeValidator;
+/// successCompletionBlock Queue
+- (dispatch_queue_t)SucceedCompletionBlockQueue;
+/// failureCompletionBlock Queue
+- (dispatch_queue_t)FailureCompletionBlockQueue;
 
 @end
 

@@ -361,7 +361,7 @@
     @autoreleasepool {
         [request requestCompletePreprocessor];
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(request.SucceedCompletionBlockQueue, ^{
         [request toggleAccessoriesWillStopCallBack];
         [request requestCompleteFilter];
 
@@ -405,7 +405,7 @@
     @autoreleasepool {
         [request requestFailedPreprocessor];
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(request.FailureCompletionBlockQueue, ^{
         [request toggleAccessoriesWillStopCallBack];
         [request requestFailedFilter];
 

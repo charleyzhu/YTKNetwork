@@ -196,6 +196,16 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     return (statusCode >= 200 && statusCode <= 299);
 }
 
+/// successCompletionBlock Queue
+- (dispatch_queue_t)SucceedCompletionBlockQueue {
+    return dispatch_get_main_queue();
+}
+
+/// failureCompletionBlock Queue
+- (dispatch_queue_t)FailureCompletionBlockQueue {
+    return dispatch_get_main_queue();
+}
+
 #pragma mark - NSObject
 
 - (NSString *)description {
